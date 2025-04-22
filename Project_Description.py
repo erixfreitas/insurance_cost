@@ -5,8 +5,6 @@ st.set_page_config(
     page_icon = 'img/doctor_icon.png',
 )
 
-st.sidebar.header('Project Description')
-
 st.write('# Welcome to the Insurance Prediction App! 🩺')
 st.write('\n\n')
 

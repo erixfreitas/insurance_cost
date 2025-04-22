@@ -11,6 +11,10 @@ st.set_page_config(
 
 # Sidebar
 st.sidebar.header('What If Prediction')
+st.sidebar.markdown('''
+    This page allows you to make predictions using the model trained in the previous page.
+    You can input your own data and see how it affects the insurance price prediction.
+''')
 
 # Page title
 st.title('Insurance Prediction')
