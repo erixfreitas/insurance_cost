@@ -1,6 +1,7 @@
 import pickle
 import pandas as pd
 import streamlit as st
+import joblib
 import os
 
 # Page config
@@ -26,8 +27,7 @@ children = st.slider(label = 'Children', min_value = 0, max_value = 5)
 smoker = st.selectbox(label = 'Smoker', options = ['yes', 'no'])
 
 # -- Model -- #
-with open('models/model.pkl', 'rb') as model_file:
-    model = pickle.load(model_file)
+model = joblib.load('models/model.pkl')
 
 def prediction():
     df_input = pd.DataFrame([{

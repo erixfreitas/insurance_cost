@@ -1,4 +1,4 @@
-import pickle
+import joblib
 import pandas as pd
 import streamlit as st
 import os
@@ -20,8 +20,7 @@ st.sidebar.markdown('''
 st.markdown('Predict medical insurance based using a CSV file.')
 
 # -- Model -- #
-with open('models/model.pkl', 'rb') as model_file:
-    model = pickle.load(model_file)
+model = joblib.load('models/model.pkl')
 
 data = st.file_uploader('Upload your file')
 if data:
